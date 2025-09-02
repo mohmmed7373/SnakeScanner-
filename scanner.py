@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-from scapy.all import ARP, Ether, srp
+import os, sys
+
+# نحاول استدعاء مكتبة scapy، ولو مش موجودة نثبتها
+try:
+    from scapy.all import ARP, Ether, srp
+except ImportError:
+    os.system(f"{sys.executable} -m pip install scapy")
+    from scapy.all import ARP, Ether, srp
+
 import argparse
 
 def welcome_message():

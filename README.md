@@ -12,4 +12,4 @@
 تنصيب المكتبة:
 
 ```bash
-pip install -r requirements.txt
+python scanner.py 192.168.1.1/24
